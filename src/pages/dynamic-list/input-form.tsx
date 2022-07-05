@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import _uniqueId from 'lodash/uniqueId';
-import {ItemEntry} from "./types";
+import {ItemProps} from "./types";
 
-export default function InputForm(props: { onSubmitItems: (item: ItemEntry) => void }) {
+export default function InputForm(props: { onSubmitItems: (item: ItemProps) => void }) {
 	const [value, setValue] = useState('');
 
 	function onInputChange(e: React.ChangeEvent<HTMLInputElement>) {

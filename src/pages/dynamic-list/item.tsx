@@ -1,16 +1,14 @@
-import {IRemoveItem, ItemEntry} from "./types";
+import {ItemProps} from "./types";
 import "./item.css";
-
-interface ItemProps extends IRemoveItem {
-	item: ItemEntry;
-}
+import {useContext} from "react";
+import DynamicListContext from "./context";
 
 export default function Item(props: ItemProps) {
-	const {item, removeItem} = props;
-	const {id, value} = item;
+	const {removeItem} = useContext(DynamicListContext);
+	const {id, value} = props;
 
 	function onItemClick() {
-		removeItem(id);
+		removeItem && removeItem(id);
 	}
 
 	return <li id={id} onClick={onItemClick}>{value}</li>;

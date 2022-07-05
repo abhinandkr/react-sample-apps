@@ -1,13 +1,14 @@
 import {useState} from "react";
 import InputForm from "./input-form";
 import ItemsList from "./items-list";
-import {ItemEntry} from "./types";
+import DynamicListContext from "./context";
+import {ItemProps} from "./types";
 
 export default function DynamicList() {
-	const [items, setItems] = useState<ItemEntry[]>([]);
+	const [items, setItems] = useState<ItemProps[]>([]);
 
-	function onSubmitItems(value: ItemEntry) {
-		setItems([...items, value]);
+	function onSubmitItems(item: ItemProps) {
+		setItems([...items, item]);
 	}
 
 	function removeItem(id: string) {
@@ -17,6 +18,8 @@ export default function DynamicList() {
 
 	return (<>
 		<InputForm onSubmitItems={onSubmitItems}/>
-		{items.length > 0 && <ItemsList items={items} removeItem={removeItem}/>}
+		<DynamicListContext.Provider value={{removeItem}}>
+			{items.length > 0 && <ItemsList items={items}/>}
+		</DynamicListContext.Provider>
 	</>);
 }
