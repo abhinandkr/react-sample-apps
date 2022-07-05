@@ -11,12 +11,14 @@ export default function NavBar() {
 					<NavLink to={'/helloworld'}>Hello world</NavLink>
 				</li>
 				<li>
-					<NavLink to={'/Stopwatch'}>Stopwatch</NavLink>
+					<NavLink to={'/stop-watch'}>Stopwatch</NavLink>
 				</li>
 				<li>
-					<NavLink to={'/fetchdata'}>Fetch Data</NavLink>
+					<NavLink to={'/fetch-data'}>Fetch Data</NavLink>
 				</li>
-
+				<li>
+					<NavLink to={'/dynamic-list'}>Dynamic List</NavLink>
+				</li>
 			</ul>
 		</nav>
 	);

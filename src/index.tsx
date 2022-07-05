@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {FetchData, HelloWorld, Layout, Page404, Stopwatch} from "./pages";
-
+import {DynamicList, FetchData, HelloWorld, Layout, Page404, StopWatch} from "./pages";
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -15,8 +14,9 @@ root.render(
 			<Routes>
 				<Route path={'/'} element={<Layout/>}/>
 				<Route path={'helloworld'} element={<HelloWorld/>}/>
-				<Route path={'stopwatch'} element={<Stopwatch/>}/>
-				<Route path={'fetchdata'} element={<FetchData />} />
+				<Route path={'stop-watch'} element={<StopWatch/>}/>
+				<Route path={'fetch-data'} element={<FetchData />} />
+				<Route path={'dynamic-list'} element={<DynamicList/>}/>
 				<Route path="*" element={<Page404/>}/>
 			</Routes>
 		</BrowserRouter>
