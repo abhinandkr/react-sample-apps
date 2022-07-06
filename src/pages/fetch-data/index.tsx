@@ -26,9 +26,13 @@ export default function FetchData() {
 	let [data, setData] = useState<IFetchData>({email: "", id: 0, name: "", phone: "", username: "", website: ""});
 
 	async function onFetchClick() {
-		const response = await fetch(url);
-		const data = await response.json();
-		setData(data);
+		try {
+			const response = await fetch(url);
+			const json = await response.json();
+			setData(json);
+		} catch (e) {
+			console.error(e);
+		}
 	}
 
 	return (

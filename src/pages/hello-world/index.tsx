@@ -1,4 +1,4 @@
-export default function HelloWorld() {
+export default function Index() {
 	return(
 		<div>Hello world!</div>
 	);

@@ -17,6 +17,9 @@ export default function NavBar() {
 					<NavLink to={'/fetch-data'}>Fetch Data</NavLink>
 				</li>
 				<li>
+					<NavLink to={'/fetch-data-axios'}>Fetch Data Axios</NavLink>
+				</li>
+				<li>
 					<NavLink to={'/dynamic-list'}>Dynamic List</NavLink>
 				</li>
 			</ul>
