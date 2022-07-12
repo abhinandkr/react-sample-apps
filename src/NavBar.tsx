@@ -1,27 +1,39 @@
 import {NavLink} from "react-router-dom";
 
 export default function NavBar() {
+	const navs = [{
+		to: '/helloworld',
+		title: 'Hello world',
+	}, {
+		to: '/stop-watch',
+		title: 'Stopwatch',
+	}, {
+		to: '/fetch-data',
+		title: 'Fetch data',
+	}, {
+		to: '/fetch-data-axios',
+		title: 'Fetch data axios',
+	}, {
+		to: '/dynamic-list',
+		title: 'Dynamic list',
+	}, {
+		to: '/tic-tac-toe',
+		title: 'Tic tac toe',
+	}, {
+		to: '/redux-example-1',
+		title: 'Redux example 1',
+	}, {
+		to: '/async-example',
+		title: 'Async example',
+	}];
 	return (
 		<nav>
 			<ul>
-				<li>
-					<NavLink to={'/'}>Home</NavLink>
-				</li>
-				<li>
-					<NavLink to={'/helloworld'}>Hello world</NavLink>
-				</li>
-				<li>
-					<NavLink to={'/stop-watch'}>Stopwatch</NavLink>
-				</li>
-				<li>
-					<NavLink to={'/fetch-data'}>Fetch Data</NavLink>
-				</li>
-				<li>
-					<NavLink to={'/fetch-data-axios'}>Fetch Data Axios</NavLink>
-				</li>
-				<li>
-					<NavLink to={'/dynamic-list'}>Dynamic List</NavLink>
-				</li>
+				{navs.map((nav, idx) => {
+					return <li key={idx}>
+						<NavLink to={nav.to}>{nav.title}</NavLink>
+					</li>
+				})}
 			</ul>
 		</nav>
 	);

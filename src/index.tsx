@@ -3,7 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {DynamicList, FetchData, FetchDataAxios, HelloWorld, Layout, Page404, StopWatch} from "./pages";
+import {
+	AsyncExample,
+	DynamicList,
+	FetchData,
+	FetchDataAxios,
+	HelloWorld,
+	Layout,
+	Page404,
+	ReduxExample1,
+	StopWatch,
+	TicTacToeGame
+} from "./pages";
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -18,6 +29,9 @@ root.render(
 				<Route path={'fetch-data'} element={<FetchData />} />
 				<Route path={'fetch-data-axios'} element={<FetchDataAxios />} />
 				<Route path={'dynamic-list'} element={<DynamicList/>}/>
+				<Route path={'tic-tac-toe'} element={<TicTacToeGame/>}/>
+				<Route path={'redux-example-1'} element={<ReduxExample1/>}/>
+				<Route path={'async-example'} element={<AsyncExample/>}/>
 				<Route path="*" element={<Page404/>}/>
 			</Routes>
 		</BrowserRouter>
