@@ -1,11 +1,12 @@
-import {createContext} from "react";
+import {createContext} from 'react';
 
 type FetchDataContextType = {
 	sort: (field: string, sortKey?: string) => void;
 }
 
 const fetchDataContextData: FetchDataContextType = {
-	sort: (field: string, sortKey?: string) => {},
+	sort: (field: string, sortKey?: string) => {
+	},
 };
 
 const FetchDataContext = createContext(fetchDataContextData);

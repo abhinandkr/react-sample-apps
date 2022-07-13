@@ -1,5 +1,5 @@
-import Item from "./item";
-import {ItemProps} from "./types";
+import Item from './item';
+import {ItemProps} from './types';
 
 interface ItemsListProps {
 	items: ItemProps[];

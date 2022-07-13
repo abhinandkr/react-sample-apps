@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {NavLink} from 'react-router-dom';
 
 export default function NavBar() {
 	const navs = [{
@@ -23,16 +23,23 @@ export default function NavBar() {
 		to: '/redux-example-1',
 		title: 'Redux example 1',
 	}, {
-		to: '/async-example',
-		title: 'Async example',
+		to: '/fetch-questions',
+		title: 'Fetch Questions - incomplete',
+	}, {
+		to: '/js-examples',
+		title: 'JS Examples',
+	}, {
+		to: '/fetch-post',
+		title: 'Fetch Post',
 	}];
+	navs.sort((a, b) => a.title.localeCompare(b.title));
 	return (
 		<nav>
 			<ul>
 				{navs.map((nav, idx) => {
 					return <li key={idx}>
 						<NavLink to={nav.to}>{nav.title}</NavLink>
-					</li>
+					</li>;
 				})}
 			</ul>
 		</nav>

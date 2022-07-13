@@ -1,8 +1,8 @@
-import {useState} from "react";
-import InputForm from "./input-form";
-import ItemsList from "./items-list";
-import DynamicListContext from "./context";
-import {ItemProps} from "./types";
+import {useState} from 'react';
+import InputForm from './input-form';
+import ItemsList from './items-list';
+import DynamicListContext from './context';
+import {ItemProps} from './types';
 
 export default function DynamicList() {
 	const [items, setItems] = useState<ItemProps[]>([]);

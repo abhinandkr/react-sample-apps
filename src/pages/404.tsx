@@ -1,5 +1,5 @@
 export default function Page404() {
-	return(
+	return (
 		<div>Whoopsie! 404 not found</div>
 	);
 }

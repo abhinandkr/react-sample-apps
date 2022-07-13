@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {StopwatchButton} from "./stopwatch-button";
-import StopwatchContext from "./stopwatch-context";
+import React, {useState} from 'react';
+import {StopwatchButton} from './stopwatch-button';
+import StopwatchContext from './stopwatch-context';
 
 export default function Stopwatch() {
 	const [timer, setTimer] = useState(0);

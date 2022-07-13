@@ -1,7 +1,7 @@
-import {ItemProps} from "./types";
-import "./item.css";
-import {useContext} from "react";
-import DynamicListContext from "./context";
+import {ItemProps} from './types';
+import './item.css';
+import {useContext} from 'react';
+import DynamicListContext from './context';
 
 export default function Item(props: ItemProps) {
 	const {removeItem} = useContext(DynamicListContext);

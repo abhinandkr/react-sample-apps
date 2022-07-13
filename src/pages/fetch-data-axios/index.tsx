@@ -1,8 +1,8 @@
 import axios from 'axios';
-import {useEffect, useState} from "react";
+import {useEffect, useState} from 'react';
 import FetchDataContext from './context';
-import {IPerson} from "./types";
-import DataTable from "./data-table";
+import {IPerson} from './types';
+import DataTable from './data-table';
 
 
 type SortedFieldType = {
@@ -38,8 +38,8 @@ export default function FetchDataAxios() {
 						coordinates: `[${coordinates.latitude}, ${coordinates.longitude}]`,
 						timezone: `${timezone.offset} ${timezone.description}`,
 						street: `${street.number} ${street.name}`,
-					}
-				}
+					},
+				};
 			});
 			return p;
 		}
@@ -51,7 +51,8 @@ export default function FetchDataAxios() {
 			setPersons(p);
 		}
 
-		fetchMyAPI().then(r => {});
+		fetchMyAPI().then(r => {
+		});
 	}, [pageNumber]);
 
 

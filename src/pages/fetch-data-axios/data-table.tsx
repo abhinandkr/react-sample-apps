@@ -1,8 +1,8 @@
-import {useContext} from "react";
-import Context from "./context";
-import {IPerson} from "./types";
+import {useContext} from 'react';
+import Context from './context';
+import {IPerson} from './types';
 
-export default function DataTable(props: {persons: IPerson[]}) {
+export default function DataTable(props: { persons: IPerson[] }) {
 	const {sort} = useContext(Context);
 	return (
 		<div>
@@ -36,7 +36,7 @@ export default function DataTable(props: {persons: IPerson[]}) {
 								<td>{location?.timezone}</td>
 							</tr>
 						);
-					}
+					},
 				)}
 				</tbody>
 			</table>

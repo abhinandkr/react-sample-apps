@@ -7,4 +7,6 @@ export {default as DynamicList} from './dynamic-list';
 export {default as FetchDataAxios} from './fetch-data-axios';
 export {default as TicTacToeGame} from './tic-tac-toe';
 export {ReduxExample1} from './redux-examples';
-export {AsyncExample, counterExample} from './js-examples';
+export {default as FetchQuestions} from './fetch-questions';
+export {default as JsExamples} from './js-examples';
+export {default as FetchPost} from './fetch-post';

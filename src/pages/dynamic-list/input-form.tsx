@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import _uniqueId from 'lodash/uniqueId';
-import {ItemProps} from "./types";
+import {ItemProps} from './types';
 
 export default function InputForm(props: { onSubmitItems: (item: ItemProps) => void }) {
 	const [value, setValue] = useState('');
@@ -16,7 +16,7 @@ export default function InputForm(props: { onSubmitItems: (item: ItemProps) => v
 	}
 
 	return (<>
-		<input type={"text"} onChange={onInputChange} value={value}/>
+		<input type={'text'} onChange={onInputChange} value={value}/>
 		<button onClick={onSubmitClick}>Submit</button>
 	</>);
 }

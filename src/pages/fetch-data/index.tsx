@@ -10,7 +10,7 @@
   }
  **/
 
-import {useState} from "react";
+import {useState} from 'react';
 
 interface IFetchData {
 	id: number;
@@ -22,8 +22,8 @@ interface IFetchData {
 }
 
 export default function FetchData() {
-	const url = "https://jsonplaceholder.typicode.com/users/1";
-	let [data, setData] = useState<IFetchData>({email: "", id: 0, name: "", phone: "", username: "", website: ""});
+	const url = 'https://jsonplaceholder.typicode.com/users/1';
+	let [data, setData] = useState<IFetchData>({email: '', id: 0, name: '', phone: '', username: '', website: ''});
 
 	async function onFetchClick() {
 		try {
