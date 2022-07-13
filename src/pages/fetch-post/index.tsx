@@ -16,21 +16,6 @@ export default function FetchPost() {
 				password: 'cityslicka',
 			}),
 		});
-		// if (loginResponse.ok) {
-		// 	const createResponse = await fetch(CREATE_URL, {
-		// 		method: 'post',
-		// 		headers: {
-		// 			'Content-Type': 'application/json',
-		// 		},
-		// 		body: JSON.stringify({
-		// 			name: 'morpheus',
-		// 			job: 'leader',
-		// 		}),
-		// 	});
-		// }
-		// const data = await loginResponse.json();
-		// return await loginResponse.json();
-		// setData(data);
 	}
 
 	function createUser() {

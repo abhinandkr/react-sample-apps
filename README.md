@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# React Sample Apps
+
+This project contains sample apps created using React while learning the same.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

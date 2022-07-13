@@ -1,0 +1,14 @@
+.navigationButtonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultsPerPageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.resultsPerPageSelect {
+    margin-left: 20px;
+    width: 5em;
+}

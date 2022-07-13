@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import InputForm from './input-form';
-import ItemsList from './items-list';
+import InputForm from './components/input-form';
+import ItemsList from './components/items-list';
 import DynamicListContext from './context';
 import {ItemProps} from './types';
 

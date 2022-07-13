@@ -1,7 +1,7 @@
-import {ItemProps} from './types';
-import './item.css';
+import {ItemProps} from '../types';
+import '../css/item.css';
 import {useContext} from 'react';
-import DynamicListContext from './context';
+import DynamicListContext from '../context';
 
 export default function Item(props: ItemProps) {
 	const {removeItem} = useContext(DynamicListContext);
@@ -11,5 +11,5 @@ export default function Item(props: ItemProps) {
 		removeItem && removeItem(id);
 	}
 
-	return <li id={id} onClick={onItemClick}>{value}</li>;
+	return <li onClick={onItemClick}>{value}</li>;
 }
