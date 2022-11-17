@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {StopwatchButton} from './stopwatch-button';
 import StopwatchContext from './stopwatch-context';
+import './index.css';
 
 export default function Stopwatch() {
 	const [timer, setTimer] = useState(0);
@@ -25,18 +26,20 @@ export default function Stopwatch() {
 
 	return (
 		<div className="App">
-			<div>{timer}</div>
-			<br/>
-			<br/>
-			<StopwatchContext.Provider value={{onClick: onStartClick}}>
-				<StopwatchButton>Start</StopwatchButton>
-			</StopwatchContext.Provider>
-			<StopwatchContext.Provider value={{onClick: onStopClick}}>
-				<StopwatchButton>Stop</StopwatchButton>
-			</StopwatchContext.Provider>
-			<StopwatchContext.Provider value={{onClick: onResetClick}}>
-				<StopwatchButton>Reset</StopwatchButton>
-			</StopwatchContext.Provider>
+			<div className={'stopwatch'}>
+				<div className={'timer'}>{timer}</div>
+				<div className={'buttons'}>
+					<StopwatchContext.Provider value={{onClick: onStartClick}}>
+						<StopwatchButton>Start</StopwatchButton>
+					</StopwatchContext.Provider>
+					<StopwatchContext.Provider value={{onClick: onStopClick}}>
+						<StopwatchButton>Stop</StopwatchButton>
+					</StopwatchContext.Provider>
+					<StopwatchContext.Provider value={{onClick: onResetClick}}>
+						<StopwatchButton>Reset</StopwatchButton>
+					</StopwatchContext.Provider>
+				</div>
+			</div>
 		</div>
 	);
 }
