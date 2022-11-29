@@ -23,6 +23,9 @@ export default function NavBar() {
 		to: '/redux-example-1',
 		title: 'Redux example 1',
 	}, {
+		to: '/redux-counter',
+		title: 'Redux Counter',
+	}, {
 		to: '/fetch-questions',
 		title: 'Fetch Questions - incomplete',
 	}, {

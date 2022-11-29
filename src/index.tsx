@@ -14,6 +14,7 @@ import {
 	Layout,
 	Page404,
 	ReduxExample1,
+	ReduxCounter,
 	StopWatch,
 	TicTacToeGame,
 } from './pages';
@@ -40,6 +41,7 @@ root.render(
 			<Route key={count++} path={'dynamic-list'} element={<DynamicList/>}/>
 			<Route key={count++} path={'tic-tac-toe'} element={<TicTacToeGame/>}/>
 			<Route key={count++} path={'redux-example-1'} element={<ReduxExample1/>}/>
+			<Route key={count++} path={'redux-counter'} element={<ReduxCounter/>}/>
 			<Route key={count++} path={'fetch-questions'} element={<FetchQuestions/>}/>
 			<Route key={count++} path={'fetch-post'} element={<FetchPost/>}/>
 
