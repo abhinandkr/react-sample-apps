@@ -13,14 +13,13 @@ import {
 	JsExamples,
 	Layout,
 	Page404,
-	ReduxExample1,
-	ReduxCounter,
+	ReduxExamples,
 	StopWatch,
 	TicTacToeGame,
 } from './pages';
 import {AsyncExample, CounterExample, SetTimeoutExample} from './pages/js-examples';
 import TreeOfTasks from './pages/js-examples/tree-of-tasks';
-
+import {PostsList, ReduxCounter, ReduxExample1} from './pages/redux-examples';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
@@ -40,8 +39,6 @@ root.render(
 			<Route key={count++} path={'fetch-data-axios'} element={<FetchDataAxios/>}/>
 			<Route key={count++} path={'dynamic-list'} element={<DynamicList/>}/>
 			<Route key={count++} path={'tic-tac-toe'} element={<TicTacToeGame/>}/>
-			<Route key={count++} path={'redux-example-1'} element={<ReduxExample1/>}/>
-			<Route key={count++} path={'redux-counter'} element={<ReduxCounter/>}/>
 			<Route key={count++} path={'fetch-questions'} element={<FetchQuestions/>}/>
 			<Route key={count++} path={'fetch-post'} element={<FetchPost/>}/>
 
@@ -51,6 +48,12 @@ root.render(
 			<Route key={count++} path={'async-example'} element={<AsyncExample/>}/>
 			<Route key={count++} path={'counter'} element={<CounterExample/>}/>
 			<Route key={count++} path={'tree-of-tasks'} element={<TreeOfTasks/>}/>
+
+			{/*Redux examples*/}
+			<Route key={count++} path={'redux-examples'} element={<ReduxExamples/>}/>
+			<Route key={count++} path={'redux-example-1'} element={<ReduxExample1/>}/>
+			<Route key={count++} path={'redux-counter'} element={<ReduxCounter/>}/>
+			<Route key={count++} path={'posts-list'} element={<PostsList/>}/>
 
 			{/*404 page*/}
 			<Route key={count++} path="*" element={<Page404/>}/>

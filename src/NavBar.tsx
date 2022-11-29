@@ -20,17 +20,14 @@ export default function NavBar() {
 		to: '/tic-tac-toe',
 		title: 'Tic tac toe',
 	}, {
-		to: '/redux-example-1',
-		title: 'Redux example 1',
-	}, {
-		to: '/redux-counter',
-		title: 'Redux Counter',
-	}, {
 		to: '/fetch-questions',
 		title: 'Fetch Questions - incomplete',
 	}, {
 		to: '/js-examples',
 		title: 'JS Examples',
+	}, {
+		to: '/redux-examples',
+		title: 'Redux examples',
 	}, {
 		to: '/fetch-post',
 		title: 'Fetch Post',
