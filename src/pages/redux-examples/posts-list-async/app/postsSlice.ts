@@ -1,40 +1,12 @@
-import {createAsyncThunk, createSlice, nanoid, type PayloadAction} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice, type PayloadAction} from '@reduxjs/toolkit';
 import {sub} from 'date-fns';
 import axios from 'axios';
 import {Post, PostReaction, State} from './types';
 
 const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
-const initialPosts: Post[] = [{
-	id: nanoid(),
-	title: 'Learning Redux Toolkit',
-	body: 'I\'ve heard good things.',
-	userId: '',
-	date: sub(new Date(), {minutes: 10}).toISOString(),
-	reactions: {
-		thumbsUp: 0,
-		wow: 0,
-		heart: 0,
-		rocket: 0,
-		coffee: 0,
-	},
-}, {
-	id: nanoid(),
-	title: 'Slices...',
-	body: 'The more I say slice, the more I want pizza.',
-	userId: '',
-	date: sub(new Date(), {minutes: 5}).toISOString(),
-	reactions: {
-		thumbsUp: 0,
-		wow: 0,
-		heart: 0,
-		rocket: 0,
-		coffee: 0,
-	},
-}];
-
 const initialState: State = {
-	posts: initialPosts,
+	posts: [],
 	status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
 	error: null,
 };
@@ -49,29 +21,9 @@ export const addNewPost = createAsyncThunk('posts/addNewPost', async (initialPos
 	return response.data;
 });
 
-const postAddedReducer = {
-	reducer(state: State, action: PayloadAction<Post>) {
+function postAddedReducer(state: State, action: PayloadAction<Post>) {
 		state.posts.push(action.payload);
-	},
-	prepare(title: string, body: string, userId: string) {
-		return {
-			payload: {
-				id: nanoid(),
-				title,
-				body,
-				userId,
-				date: new Date().toISOString(),
-				reactions: {
-					thumbsUp: 0,
-					wow: 0,
-					heart: 0,
-					rocket: 0,
-					coffee: 0,
-				},
-			},
-		};
-	},
-};
+}
 
 function reactionAddedReducer(state: State, action: PayloadAction<PostReaction>) {
 	const {postId, reaction} = action.payload;
@@ -150,5 +102,5 @@ export const getPostsStatus = (state: any) => state.postsSliceReducer.status;
 export const getPostsError = (state: any) => state.postsSliceReducer.error;
 
 export default postsSlice.reducer;
-export const {postAdded, reactionAdded} = postsSlice.actions;
+export const {reactionAdded} = postsSlice.actions;
 
