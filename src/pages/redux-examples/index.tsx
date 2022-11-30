@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 export {default as ReduxExample1} from './example-1';
 export {default as ReduxCounter} from './counter';
 export {default as PostsList} from './posts-list';
+export {default as PostsListAsync} from './posts-list-async';
 
 
 export default function ReduxExamples() {
@@ -15,6 +16,9 @@ export default function ReduxExamples() {
 	}, {
 		to: '/posts-list',
 		title: 'Posts List',
+	}, {
+		to: '/posts-list-async',
+		title: 'Posts List Async',
 	}];
 	return (
 		<nav>

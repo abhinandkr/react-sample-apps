@@ -19,7 +19,7 @@ import {
 } from './pages';
 import {AsyncExample, CounterExample, SetTimeoutExample} from './pages/js-examples';
 import TreeOfTasks from './pages/js-examples/tree-of-tasks';
-import {PostsList, ReduxCounter, ReduxExample1} from './pages/redux-examples';
+import {PostsList, ReduxCounter, ReduxExample1, PostsListAsync} from './pages/redux-examples';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
@@ -54,6 +54,7 @@ root.render(
 			<Route key={count++} path={'redux-example-1'} element={<ReduxExample1/>}/>
 			<Route key={count++} path={'redux-counter'} element={<ReduxCounter/>}/>
 			<Route key={count++} path={'posts-list'} element={<PostsList/>}/>
+			<Route key={count++} path={'posts-list-async'} element={<PostsListAsync/>}/>
 
 			{/*404 page*/}
 			<Route key={count++} path="*" element={<Page404/>}/>
