@@ -1,6 +1,6 @@
 import {CaseReducerWithPrepare, createSlice, nanoid, type PayloadAction} from '@reduxjs/toolkit';
 import {sub} from 'date-fns';
-import {Post, PostReaction, State} from './types';
+import {Post, PostReaction} from './types';
 
 const initialPosts: Post[] = [{
 	id: nanoid(),
@@ -72,7 +72,7 @@ const postsSlice = createSlice({
 	},
 });
 
-export const selectAllPosts = (state: State) => state.posts;
+export const selectAllPosts = (state: any) => state.postsSliceReducer;
 
 export default postsSlice.reducer;
 export const {postAdded, reactionAdded} = postsSlice.actions;

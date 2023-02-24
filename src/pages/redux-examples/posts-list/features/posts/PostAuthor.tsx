@@ -1,5 +1,6 @@
 import {useSelector} from 'react-redux';
 import {selectAllUsers} from '../../app/usersSlice';
+import {User} from '../../app/types';
 
 type PostAuthorProps = {
 	userId: string,
@@ -8,7 +9,7 @@ type PostAuthorProps = {
 const PostAuthor = (props: PostAuthorProps) => {
 	const users = useSelector(selectAllUsers);
 
-	const author = users.find(user => user.id === props.userId);
+	const author = users.find((user: User) => user.id === props.userId);
 
 	return <span>by {author ? author.name : 'Unknown author'}</span>;
 };

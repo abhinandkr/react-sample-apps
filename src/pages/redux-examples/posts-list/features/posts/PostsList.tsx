@@ -3,16 +3,14 @@ import {selectAllPosts} from '../../app/postsSlice';
 import PostAuthor from './PostAuthor';
 import TimeAgo from './TimeAgo';
 import ReactionButtons from './ReactionButtons';
+import {Post} from '../../app/types';
 
-interface Props {
-}
-
-export default function PostsList(props: Props) {
+export default function PostsList() {
 	const posts = useSelector(selectAllPosts);
 
-	const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
+	const orderedPosts = posts.slice().sort((a: Post, b: Post) => b.date.localeCompare(a.date));
 
-	const renderedPosts = orderedPosts.map(post => {
+	const renderedPosts = orderedPosts.map((post: Post) => {
 		const {id, content, userId, title, date} = post;
 
 		return (<article key={id}>

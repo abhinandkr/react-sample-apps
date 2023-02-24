@@ -46,7 +46,7 @@ const postsSlice = createSlice({
 			.addCase(fetchPosts.pending, (state: State) => {
 				state.status = 'loading';
 			})
-			.addCase(fetchPosts.fulfilled, (state: State, action) => {
+			.addCase(fetchPosts.fulfilled, (state: State, action: PayloadAction<Post[]>) => {
 				state.status = 'succeeded';
 				// Adding date and reactions
 				let min = 1;

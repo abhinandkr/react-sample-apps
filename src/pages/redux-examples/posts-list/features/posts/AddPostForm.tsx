@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {postAdded} from '../../app/postsSlice';
 import {selectAllUsers} from '../../app/usersSlice';
+import {User} from '../../app/types';
 
 const AddPostForm = () => {
 	const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const AddPostForm = () => {
 	};
 
 	const canSave = !!title && !!content && !!userId;
-	const usersOptions = users.map(user => (
+	const usersOptions = users.map((user: User) => (
 		<option key={user.id} value={user.id}>
 			{user.name}
 		</option>

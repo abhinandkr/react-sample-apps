@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {State} from './types';
 
 const initialState = [
     { id: '0', name: 'Dude Lebowski' },
@@ -13,6 +12,6 @@ const usersSlice = createSlice({
     reducers: {}
 })
 
-export const selectAllUsers = (state: State) => state.users;
+export const selectAllUsers = (state: any) => state.usersSliceReducer;
 
 export default usersSlice.reducer;
